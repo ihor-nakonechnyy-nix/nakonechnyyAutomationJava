@@ -1,4 +1,4 @@
-package com.welcome;
+package com.hello;
 
 public class Hello {
 
