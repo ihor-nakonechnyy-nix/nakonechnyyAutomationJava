@@ -2,7 +2,7 @@ package com.typeConversions;
 
 import java.util.Scanner;
 
-public class Task_4 {
+public class task_4 {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
