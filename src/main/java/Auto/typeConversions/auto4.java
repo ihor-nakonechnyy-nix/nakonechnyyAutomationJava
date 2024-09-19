@@ -1,6 +1,6 @@
-package com.typeConversions;
+package Auto.typeConversions;
 
-public class task_4 {
+public class auto4 {
 
     public static void main(String[] args) {
 

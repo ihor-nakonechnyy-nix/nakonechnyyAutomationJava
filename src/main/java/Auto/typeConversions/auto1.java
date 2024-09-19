@@ -1,11 +1,11 @@
-package com.typeConversions;
+package Auto.typeConversions;
 /*Task 1:
 Two natural numbers are stored in the variables q and w.
 Create a program that displays the result of dividing q by w with a remainder. Example of the program output
 (for the case when q stores 21 and w stores 8): 21 / 8 = 2 and 5 in the remainder/*/
 import java.util.Scanner;
 
-class task_1 {
+class auto1 {
 
     public static void main (String[] args ) {
 

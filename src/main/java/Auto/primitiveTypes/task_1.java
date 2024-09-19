@@ -1,4 +1,4 @@
-package com.primitiveTypes;
+package Auto.primitiveTypes;
 
 
 import java.util.Scanner;

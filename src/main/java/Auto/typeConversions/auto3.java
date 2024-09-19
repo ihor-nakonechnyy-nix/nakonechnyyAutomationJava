@@ -1,4 +1,4 @@
-package com.typeConversions;
+package Auto.typeConversions;
 
 /*
 A real number with a non-zero fractional part is stored in the variable n.
@@ -6,7 +6,7 @@ Create a program that rounds the number n to the nearest integer and displays th
 */
 import java.util.Scanner;
 
-public class    task_3 {
+public class auto3 {
 
     public static void main(String[] args ) {
         Scanner scanner = new Scanner(System.in);

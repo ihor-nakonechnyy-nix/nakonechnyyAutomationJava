@@ -1,4 +1,4 @@
-package com.typeConversions;
+package Auto.typeConversions;
 
 /*Task 2
 The variable n stores a natural two-digit number.
@@ -7,7 +7,7 @@ Create a program that calculates and displays the sum of digits of n.*/
 import java.util.Scanner;
 
 
-public class task_2 {
+public class auto2 {
 
 
     public static void main(String[] args) {
