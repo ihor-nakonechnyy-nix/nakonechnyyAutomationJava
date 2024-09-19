@@ -1,5 +1,9 @@
 package com.typeConversions;
 
+/*Task 2
+The variable n stores a natural two-digit number.
+Create a program that calculates and displays the sum of digits of n.*/
+
 import java.util.Scanner;
 
 

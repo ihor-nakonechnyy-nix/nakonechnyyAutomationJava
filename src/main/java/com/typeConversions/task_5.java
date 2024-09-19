@@ -6,19 +6,23 @@ Create a program that rounds the number n to the nearest integer and displays th
 */
 import java.util.Scanner;
 
-public class    task_3 {
+public class task_5 {
 
     public static void main(String[] args ) {
         Scanner scanner = new Scanner(System.in);
-
-        System.out.print("Enter a real number with: ");
-        double n = scanner.nextDouble();
-        long roundedNumber = Math. round(n);
-        System.out.println(n);
-        System.out.println("The rounded number is: " + roundedNumber);
+        System.out.print("Enter last Name: ");
+        String Name = scanner.nextLine();
 
 
+        System.out.println("Hello " + Name);
 
+        System.out.print("enter age: ");
+        int age = scanner.nextInt();
+        System.out.println("My age: " + age);
+
+
+
+        //float n = 12.5f;
 
 
 
