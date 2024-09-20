@@ -1,4 +1,4 @@
-package Auto.typeConversions;
+package ua.nix.auto.typeConversions;
 
 /*Task 2
 The variable n stores a natural two-digit number.
@@ -16,13 +16,13 @@ public class auto2 {
         System.out.print("Enter a two-digit natural number (n): ");
         int n = scanner.nextInt();
 
-        int digit1 = n / 10;   // First digit (tens place)
-        int digit12 = n % 10;  // Second digit (units place)
+        int digit1 = n / 10;
+        int digit12 = n % 10;
 
-        // Calculate the sum of the digits
+
         int sum = digit1 + digit12;
 
-        // Display the result
+
         System.out.println("The sum of the digits of " + n + " is: " + sum);
 
     }

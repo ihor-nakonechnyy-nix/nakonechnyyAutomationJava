@@ -1,4 +1,4 @@
-package Auto.typeConversions;
+package ua.nix.auto.typeConversions;
 
 /*
 A real number with a non-zero fractional part is stored in the variable n.

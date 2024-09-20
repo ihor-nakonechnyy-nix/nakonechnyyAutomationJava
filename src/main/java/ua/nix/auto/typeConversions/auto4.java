@@ -1,4 +1,4 @@
-package Auto.typeConversions;
+package ua.nix.auto.typeConversions;
 
 public class auto4 {
 

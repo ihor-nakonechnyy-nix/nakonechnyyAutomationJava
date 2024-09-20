@@ -1,4 +1,4 @@
-package Auto.primitiveTypes;
+package ua.nix.auto.primitiveTypes;
 
 
 import java.util.Scanner;

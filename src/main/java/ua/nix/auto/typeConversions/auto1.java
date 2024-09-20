@@ -1,4 +1,4 @@
-package Auto.typeConversions;
+package ua.nix.auto.typeConversions;
 /*Task 1:
 Two natural numbers are stored in the variables q and w.
 Create a program that displays the result of dividing q by w with a remainder. Example of the program output
