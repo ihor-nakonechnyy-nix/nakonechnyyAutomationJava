@@ -1,6 +1,11 @@
 package ua.nix.auto.typeConversions;
 
-public class auto4 {
+/*
+Given three variables a, b and c. Change the values of these variables so that a stores the value of a+b, b stores the difference of
+the old values of c-a, and c stores the sum of the old values of a+b+c. For example, a=0, b=2, c=5, then the new values are a=2, b=5 and c=7.
+*/
+
+public class Auto4 {
 
     public static void main(String[] args) {
 

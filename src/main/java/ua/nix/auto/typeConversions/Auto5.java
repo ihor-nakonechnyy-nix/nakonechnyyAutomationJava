@@ -1,13 +1,9 @@
 package ua.nix.auto.typeConversions;
 
-/*
-A real number with a non-zero fractional part is stored in the variable n.
-Create a program that rounds the number n to the nearest integer and displays the result on the screen.
-*/
-
 import java.util.Scanner;
 
-public class auto5 {
+
+public class Auto5 {
 
     public static void main(String[] args) {
 
@@ -26,7 +22,8 @@ public class auto5 {
     }
 
 
-    }
+
+}
 
 
 
