@@ -26,8 +26,6 @@ public class StaringTask_1 {
 
 
 
-            int numberOfSpaces = countSpaces("I want some ice cream. Please");
-        System.out.println("Number of spaces: " + numberOfSpaces);
 
 
 
