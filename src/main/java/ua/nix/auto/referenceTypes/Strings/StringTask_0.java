@@ -1,4 +1,4 @@
-package ua.nix.auto.referenceTypesStrings;
+package ua.nix.auto.referenceTypes.Strings;
 import java.util.Scanner;
 
 public class StringTask_0 {

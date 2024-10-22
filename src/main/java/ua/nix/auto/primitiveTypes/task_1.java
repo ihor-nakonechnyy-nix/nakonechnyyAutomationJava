@@ -12,10 +12,10 @@ class task_1 {
     }
 
     public static void printHelloName() {
-        Scanner scanner = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
         System.out.print("Enter your name: ");
-        String name = scanner.nextLine();
+        String name = scan.nextLine();
         System.out.println("Hello, " + name + "!");
-        scanner.close();
+        scan.close();
     }
 }
