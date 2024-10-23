@@ -11,48 +11,60 @@ public class Task_1 {
     public static void main(String[] args) {
 
         String text = "I want some ice cream.!!!";
+        //Output full length of the string
         int length = text.length();
         System.out.println(length);
 
+        //Output half string's length
         int halfOfText = length / 2;
         System.out.println(halfOfText);
-        System.out.println();
-//Output the first, last and middle (if any) characters
+
+        //Output first character
         System.out.println("First character: " + text.charAt(0));
+        //Output middle character
         System.out.println("Middle character: " + text.charAt(halfOfText));
+        //Output last character
         System.out.println("Last character: " + text.charAt(length - 1));
-        System.out.println();
-//outputs the part of the string up to and including the first point encountered.
+
+        //outputs the part of the string up to and including the first point encountered.
         String partOfTheString = text.substring(0, text.length() - 3);
-        System.out.println(partOfTheString);
+        System.out.println("Up the point point " + partOfTheString);
 
-
-        //"I want some ice cream.!!!"
-        // string contains spaces
+        // Tells that string contains spaces, true or false
         System.out.println(text.contains(" "));
 
         int spaceCount = 0;
-        int exsSignCount = 0;
+        int exclamationSignCount = 0;
+
         for (int i = 0; i < text.length(); i++) {
-            //    spaceCount = 0;
-            if (text.charAt(i) == ' ') {
+            if (text.charAt(i) == ' ')
+            {
                 spaceCount++;
             } else if (text.charAt(i) == '!') {
-                exsSignCount++;
+                exclamationSignCount++;
 
             }
+
             System.out.println("character " + text.charAt(i));
 
 
         }
-        System.out.println(spaceCount);
-        System.out.println(exsSignCount);
+        System.out.println("spaces " + spaceCount);
+        System.out.println("exclamation " + exclamationSignCount);
+
+//        int letterCount = 0;
+//        for (int i = 0; i < text.length(); i++) {
+//            if (text.charAt(i) == 'm') {
+//                letterCount++;
+//            }
+
+            //System.out.println("shows letter only: " + letterCount);
 
 
 //        int spacesQuantity = text.charAt(' ');
 //        System.out.println(spacesQuantity);
 
-        // split string
+            // split string
 //        String[] textSplit = text.split(" ");
 //        System.out.println("part 1: " + textSplit[0]);
 //        System.out.println("part 2: " + textSplit[1]);
@@ -64,7 +76,7 @@ public class Task_1 {
 //        System.out.println(text.split(" ").length);
 
 
-        //System.out.println("quantity of spaces: " + text.length());
+            //System.out.println("quantity of spaces: " + text.length());
 
 
 //        outputting the number of spaces
@@ -86,7 +98,8 @@ public class Task_1 {
 //
 //            }
 //        }
+        }
+
+
     }
 
-
-}
