@@ -1,33 +1,34 @@
 package ua.nix.auto.referenceTypes.Strings;
-import java.util.Scanner;
+
+import java.util.Scanner; // Імпорт класу Scanner для введення користувача
 
 public class StringTask_1_1 {
 
 
+
         public static void main(String[] args) {
-            // Створюємо сканер для читання введеного рядка
+            // Створення об'єкта Scanner для зчитування введення користувача
             Scanner scanner = new Scanner(System.in);
 
-            System.out.println("Enter a string of words separated by spaces:");
-            // Зчитуємо весь введений рядок
-            String input = scanner.nextLine();
+            System.out.print("Enter a positive number: ");
+            int number = scanner.nextInt(); // Зчитування цілого числа від користувача
 
-            // Розбиваємо рядок на масив слів за пробілами
-            String[] words = input.split(" ");
+            // Перевірка, чи введене число є додатним
+            if (number > 0) {
+                int sum = 0; // Змінна для зберігання суми чисел
 
-            // Змінна для зберігання найдовшого слова
-            String longestWord = "";
-
-            // Проходимо по всіх словах
-            for (String word : words) {
-                // Якщо довжина поточного слова більше довжини найдовшого слова, оновлюємо найдовше слово
-                if (word.length() > longestWord.length()) {
-                    longestWord = word;
+                // Цикл for для обчислення суми чисел від 1 до number
+                for (int i = 1; i <= number; i++) {
+                    sum += i; // Додаємо значення i до змінної sum
                 }
-            }
 
-            // Виводимо найдовше слово
-            System.out.println("The longest word is: " + longestWord);
+                // Виведення результату
+                System.out.println("The sum of numbers from 1 to " + number + " is: " + sum);
+            } else {
+                System.out.println("Please enter a positive number."); // Повідомлення про помилку
+            }
         }
     }
+
+
 
