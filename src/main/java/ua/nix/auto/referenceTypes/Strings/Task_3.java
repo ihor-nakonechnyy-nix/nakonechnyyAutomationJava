@@ -13,24 +13,23 @@ public class Task_3 {
     public static void main(String[] Args) {
 
         Scanner scan = new Scanner(System.in);
-        System.out.println("Enter sentence that contains one word that longest that others: ");
-
+        System.out.println("Enter sentence: ");
         String sentence = scan.nextLine();
+
         String[] sentenceSplit = sentence.split(" ");
         String longestWord = "";
 
         for (String word : sentenceSplit) {
             if (word.length() > longestWord.length()) {
-
                 longestWord = word;
 
             }
         }
 
-            System.out.println("longest word: " + longestWord);
+        System.out.println("longest word: " + longestWord);
 
 
-        }
+    }
 
     public static void main2(String[] Args) {
 
@@ -46,5 +45,5 @@ public class Task_3 {
         }
 
 
-        }
     }
+}
