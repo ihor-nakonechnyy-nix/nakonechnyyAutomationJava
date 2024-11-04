@@ -12,7 +12,7 @@ public class NameAge {
         Scanner scan = new Scanner(System.in);
         System.out.print("input your name here: ");
         String text = scan.nextLine();
-        System.out.println("my name: " + text);
+        System.out.println("my age: " + text);
 
         System.out.print("input age: ");
         int number = scan.nextInt();

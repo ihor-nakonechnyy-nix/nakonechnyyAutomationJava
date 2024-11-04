@@ -31,19 +31,8 @@ public class Task_3 {
 
     }
 
-    public static void main2(String[] Args) {
 
-        String txt = "string of words separated by spaces is entered";
-
-        String[] split = txt.split(" ");
-        String longestWord = "";
-
-        for (int i = 0; i < longestWord.length(); i++) {
-            if (split.length > longestWord.length()) ;
-            System.out.println(longestWord);
-
-        }
-
-
-    }
 }
+
+
+

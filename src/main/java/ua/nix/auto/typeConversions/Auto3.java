@@ -3,7 +3,8 @@ import java.util.Scanner;
 
 /*
 A real number with a non-zero fractional part is stored in the variable n.
-Create a program that rounds the number n to the nearest integer and displays the result on the screen.
+Create a program that rounds the number n to the nearest
+integer and displays the result on the screen.
 */
 public class Auto3 {
 

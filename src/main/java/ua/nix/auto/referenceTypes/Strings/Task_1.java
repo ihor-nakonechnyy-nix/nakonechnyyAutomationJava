@@ -33,7 +33,7 @@ public class Task_1 {
         System.out.println(text.contains(" "));
 
         int findPeriod = text.indexOf('.');
-        //if (findPeriod != -1)
+        if (findPeriod != -1)
             System.out.println(text.substring(0, findPeriod + 1));
 
 
