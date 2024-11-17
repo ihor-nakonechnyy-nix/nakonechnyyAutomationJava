@@ -10,7 +10,7 @@ public class task_1 {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-        int[] list = new int[10];
+        int[] list = new int[20];
 
         for (int i = 0; i < list.length; i++) {
             String s = reader.readLine();
