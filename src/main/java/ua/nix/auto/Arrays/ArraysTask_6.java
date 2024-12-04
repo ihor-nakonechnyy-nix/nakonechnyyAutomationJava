@@ -15,7 +15,7 @@ import java.util.Arrays;
 //the other half into the second small array.
 //5. Display the second small array on the screen, each value on a new line.
 
-public class Task_6 {
+public class ArraysTask_6 {
     public static void main(String[] args) throws IOException {
 
 //        Reader r = new InputStreamReader(System.in);

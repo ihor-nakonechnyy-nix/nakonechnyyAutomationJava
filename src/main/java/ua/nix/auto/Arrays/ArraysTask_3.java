@@ -2,7 +2,7 @@ package ua.nix.auto.Arrays;
 
 import java.util.Scanner;
 
-public class Task_3 {
+public class ArraysTask_3 {
 
     public static void main(String[] args) {
         String[] strgs = new String[10];

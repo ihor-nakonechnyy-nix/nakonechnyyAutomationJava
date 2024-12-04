@@ -3,7 +3,7 @@ package ua.nix.auto.Arrays;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Task_4 {
+public class ArraysTask_4 {
 
     public static void main(String[] args) {
 

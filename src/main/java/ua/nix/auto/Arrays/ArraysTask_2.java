@@ -11,7 +11,7 @@ import java.io.InputStreamReader;
 //3. Display the contents of the entire array (10 elements) on the screen in reverse order.
 //Each element - from a new line.
 
-public class Task_2 {
+public class ArraysTask_2 {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 

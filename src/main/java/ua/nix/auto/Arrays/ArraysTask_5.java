@@ -2,7 +2,7 @@ package ua.nix.auto.Arrays;
 
 import java.util.Scanner;
 
-public class Task_5 {
+public class ArraysTask_5 {
     public static void main(String[] args) {
         // Крок 1: Створення масиву на 20 чисел
         int[] largeArray = new int[20];

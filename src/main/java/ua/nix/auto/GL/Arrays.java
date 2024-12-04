@@ -10,12 +10,13 @@ public class Arrays {
         fillArrFromConsole(arr);
         int findMax = findMax(arr);
         int findMin = findMin(arr);
-        int findSum = findSum(arr);
+        double findSum = findSum(arr);
+        double  findAverage =  findAverage(arr);
 
         System.out.println("min value " + findMin);
         System.out.println("max value " + findMax);
         System.out.println("Sum value " + findSum);
-        System.out.println("Average value " + findAverage(arr));
+        System.out.println("Average value " + findAverage);
 
         //fillArrByQuare(arr);
         printArr(arr);
@@ -30,7 +31,7 @@ public class Arrays {
         return sum;
     }
 private static double findAverage (int[] arr) {
-        return findSum(arr)/5;
+        return (double) findSum(arr)/ arr.length;
 }
 
 

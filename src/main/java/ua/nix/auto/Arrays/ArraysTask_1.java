@@ -11,7 +11,7 @@ import java.io.InputStreamReader;
 //1.2. Read 20 numbers from the console and fill the array with them
 //2. The max(int[] array) method should find the maximum number from the array elements
 
-public class Task_1 {
+public class ArraysTask_1 {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
