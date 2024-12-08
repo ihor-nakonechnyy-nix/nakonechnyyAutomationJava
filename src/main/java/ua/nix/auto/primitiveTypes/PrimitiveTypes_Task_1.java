@@ -4,7 +4,7 @@ package ua.nix.auto.primitiveTypes;
 import java.util.Scanner;
 
 
-class PrimitiveTypesTask_1 {
+class PrimitiveTypes_Task_1 {
 
     public static void main(String[] args) {
         System.out.println("Hello World");
