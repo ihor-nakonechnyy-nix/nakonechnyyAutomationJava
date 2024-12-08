@@ -1,4 +1,4 @@
-package ua.nix.auto.ControlConstructs;
+package ua.nix.auto.ControlConstructs.conditionalOperators;
 
 
 import java.util.Scanner;
@@ -19,19 +19,32 @@ public class ConditionalOperatorsTask_3 {
 
         System.out.print("enter third num: ");
         num3 = scann.nextInt();
-        int temp;
+
+
+        int num0;
+
         if (num1 < num2) {
-            temp = num1;
+            num0 = num1;
             num1 = num2;
-            num2 = temp;
+            num2 = num0;
         }
 
         if (num1 < num3) {
-            temp = num1;
+            num0 = num1;
             num1 = num3;
-            num3 = temp;
+            num3 = num0;
         }
 
 
+        if (num2 < num3) {
+            num0 = num2;
+            num2 = num3;
+            num3 = num0;
+        }
+
+        System.out.println("numbers in descending order:");
+        System.out.println(num1);
+        System.out.println(num2);
+        System.out.println(num3);
     }
 }

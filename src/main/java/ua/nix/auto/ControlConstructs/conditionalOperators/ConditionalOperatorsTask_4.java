@@ -1,4 +1,4 @@
-package ua.nix.auto.ControlConstructs;
+package ua.nix.auto.ControlConstructs.conditionalOperators;
 
 //Enter two names from the keyboard, and if the names are the same, display the message "The names are identical".
 // If the names are different but their lengths are equal, display the message "The lengths of the names are equal".

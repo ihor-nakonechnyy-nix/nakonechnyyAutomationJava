@@ -1,4 +1,4 @@
-package ua.nix.auto.ControlConstructs;
+package ua.nix.auto.ControlConstructs.conditionalOperators;
 import java.util.Scanner;
 
 

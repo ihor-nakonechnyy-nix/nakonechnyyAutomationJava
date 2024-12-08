@@ -1,4 +1,4 @@
-package ua.nix.auto.ControlConstructs;
+package ua.nix.auto.ControlConstructs.conditionalOperators;
 
 //For seven attempts to guess a number.
 // At each attempt you will see a message - "Little" or "Much".
@@ -99,6 +99,7 @@ public class ConditionalOperatorsTask_7 {
 
         if (attempt7 != secret) {
             System.out.println("Did not guess");
+            System.out.println("the sucret number is  " + secret);
 
         }
     }
