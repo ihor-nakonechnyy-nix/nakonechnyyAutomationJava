@@ -22,9 +22,11 @@ public class ConditionalOperatorsTask_4 {
             System.out.println("The names are identical");
         } else if (name1.length() == name2.length()) {
             System.out.println("The lengths of the names are equal");
+        } else {
+            System.out.println("The lengths of the names are not equal");
+
+
         }
-
-
     }
 }
 

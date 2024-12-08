@@ -1,13 +1,13 @@
 package ua.nix.auto.ControlConstructs;
 
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 //Input four numbers from the keyboard, and display the maximum of them.
-public class ConditionalOperatorsTask_2 {
+public class ConditionalOperatorsTask_2_1 {
 
     public static void main(String[] args) {
+
         Scanner scann = new Scanner(System.in);
 
         System.out.print("enter first digit: ");

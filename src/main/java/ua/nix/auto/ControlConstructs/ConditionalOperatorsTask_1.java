@@ -8,30 +8,30 @@ public class ConditionalOperatorsTask_1 {
     public static void main(String[] args) {
         Scanner scann = new Scanner(System.in);
 
-        System.out.println("enter a first digit: ");
+        System.out.print("enter a first digit: ");
         int number1 = scann.nextInt();
-        System.out.println("enter a second digit: ");
+        System.out.print("enter a second digit: ");
         int number2 = scann.nextInt();
 
-        int min = Math.min(number1, number2);
-
-        System.out.println("Мінімальне число: " + min);
-        scann.close();
-
-
-        int minNumber;
-        if (number1 < number2) System.out.println("number1 is min");
-        else System.out.println("number2 is min");
+//        int min = Math.min(number1, number2);
+//
+//        System.out.println("Мінімальне число: " + min);
+//        scann.close();
 
 
-        System.out.println();
-        if (number1 < number2)
+        //int minNumber;
+        if (number1 < number2) System.out.println(number1 + " is min");
+        else System.out.println(number2 + " is min");
 
-            System.out.println(number1);
 
-        else
-
-            System.out.println(number2);
+//        System.out.println();
+//        if (number1 < number2)
+//
+//            System.out.println(number1);
+//
+//        else
+//
+//            System.out.println(number2);
 
     }
 
