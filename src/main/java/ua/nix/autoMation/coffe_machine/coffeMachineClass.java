@@ -14,6 +14,7 @@ public class coffeMachineClass {
 
 
     }
+
     public int[] ingridientsAmountCalculation() {
         int water = this.water * 25;
         int milk = this.milk * 25;
