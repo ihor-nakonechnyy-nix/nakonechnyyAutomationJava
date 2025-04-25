@@ -9,12 +9,11 @@ public class App_main {
         //No ingredients added
         CoffeeMachine coffeeMachine = new CoffeeMachine(0, 0, 0);
 
-
         System.out.println();  //paragraph
         System.out.println("Add ingredients to the machine: \nWater: 10000ml;\nMilk: 10000ml;\nCoffee Beans: 1000gr");
         System.out.println();  //paragraph
-        //add the ingredients to the coffee machine
 
+        //add the ingredients to the coffee machine
         coffeeMachine.addSupplies();
         //show how much ingredients in the coffee machine
         System.out.println("Show ingredients in the machine");
@@ -42,11 +41,13 @@ public class App_main {
         coffeeMachine.coffeePrepared(customerOrder);
 
 
+        System.out.println();  //paragraph
+        coffeeMachine.addSupplies();
+        coffeeMachine.showSupplies();
+
+
+
     }
-
-
-
-
 
 
 }
