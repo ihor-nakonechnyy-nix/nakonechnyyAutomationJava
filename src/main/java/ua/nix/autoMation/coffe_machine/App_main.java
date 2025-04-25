@@ -11,12 +11,13 @@ public class App_main {
 
 
         System.out.println();  //paragraph
-        System.out.println("Add ingredients to the coffee machine");
+        System.out.println("Add ingredients to the machine: \nWater: 10000ml;\nMilk: 10000ml;\nCoffee Beans: 1000gr");
+        System.out.println();  //paragraph
+        //add the ingredients to the coffee machine
 
-        //Use addSupplies method to add the ingredients to the coffee machine
         coffeeMachine.addSupplies();
-        //Use showSupplies method to show how much ingredients in the coffee machine
-        System.out.println("Show supplies left in the coffee machine");
+        //show how much ingredients in the coffee machine
+        System.out.println("Show ingredients in the machine");
         coffeeMachine.showSupplies();
 
         System.out.println();  //paragraph
@@ -33,17 +34,19 @@ public class App_main {
         System.out.println();  //paragraph
         //Shows supplies left after the order done
         System.out.println("Shows ingredients after the order of: " + customerOrder + " cups is prepared");
-        coffeeMachine.ingredientsAfterOrderCompleted(customerOrder);
+        coffeeMachine.ingredientsRequiredForOrderCompleted(customerOrder);
         coffeeMachine.showSupplies();
 
-        if (customerOrder*)
-
-
-
-
+        //Shows weather the order is preparing or no
+        System.out.println();  //paragraph
+        coffeeMachine.coffeePrepared(customerOrder);
 
 
     }
+
+
+
+
 
 
 }

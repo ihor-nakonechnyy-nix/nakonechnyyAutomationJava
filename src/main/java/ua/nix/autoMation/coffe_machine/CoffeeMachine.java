@@ -5,25 +5,25 @@ public class CoffeeMachine {
 
     private int water;
     private int milk;
-    private int coffee_beans;
+    private int beans;
 
     public CoffeeMachine(int water, int milk, int coffee_beans) {
         this.water = water;
         this.milk = milk;
-        this.coffee_beans = coffee_beans;
+        this.beans = coffee_beans;
 
     }
 
     public void addSupplies() {
         this.water += 10000;
         this.milk += 10000;
-        this.coffee_beans += 1000;
+        this.beans += 1000;
     }
 
     public void showSupplies() {
         System.out.println("Available Water: " + water + " ml");
         System.out.println("Available Milk: " + milk + " ml");
-        System.out.println("Available Coffee beans: " + coffee_beans + " gr");
+        System.out.println("Available Coffee beans: " + beans + " gr");
     }
 
     private int[] ingredientsCalculation(int customerOrder) {
@@ -43,10 +43,33 @@ public class CoffeeMachine {
 
     }
 
-    public void ingredientsAfterOrderCompleted(int customerOrder) {
+    public void ingredientsRequiredForOrderCompleted(int customerOrder) {
         water = this.water - customerOrder * 200;
         milk = this.milk - customerOrder * 50;
-        coffee_beans = this.coffee_beans - customerOrder * 15;
+        beans = this.beans - customerOrder * 15;
 
     }
+
+    public void coffeePrepared(int customerOrder) {
+        int waterNeed = 200 * customerOrder;
+        int milkNeed = 50 * customerOrder;
+        int beansNeed = 15 * customerOrder;
+
+        if (waterNeed <= this.water && milkNeed <= this.milk && beansNeed <= this.beans)
+                System.out.println("Yes, I can make that amount of coffee. \nYour order of: " + customerOrder + " is preparing");
+        else if (waterNeed >= this.water && milkNeed >= this.milk && beansNeed >= this.beans) {
+            System.out.println("Not enough inridients to prepare : " + customerOrder + " cups of coffee");
+
+            if (waterNeed >= this.water) ;
+            System.out.println("Refile the water container");
+            if (milkNeed >= this.milk) ;
+            System.out.println("Refile the milk container");
+            if (beansNeed >= this.beans) ;
+            System.out.println("Add coffee beans");
+
+
+        }
+    }
+
+
 }
