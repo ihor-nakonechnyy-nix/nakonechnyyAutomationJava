@@ -60,12 +60,15 @@ public class CoffeeMachine {
         else if (waterNeed >= this.water && milkNeed >= this.milk && beansNeed >= this.beans) {
             System.out.println("Not enough inridients to prepare : " + customerOrder + " cups of coffee");
 
+
             if (waterNeed >= this.water) ;
             System.out.println("Refile the water container");
             if (milkNeed >= this.milk) ;
             System.out.println("Refile the milk container");
             if (beansNeed >= this.beans) ;
             System.out.println("Add coffee beans");
+
+
 
 
         }
