@@ -18,9 +18,9 @@ public class Task_8 {
 
         int maxLength = 0;
 
-        for (String listed : list) {
-            if (listed.length() > maxLength)
-                maxLength = listed.length();
+        for (String listElement : list) {
+            if (listElement.length() > maxLength)
+                maxLength = listElement.length();
         }
 
         for (String listed : list) {

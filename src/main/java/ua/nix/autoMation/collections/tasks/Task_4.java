@@ -21,7 +21,7 @@
 
             System.out.println("================");
 
-            for (var entry : fruitmap.entrySet()) {
+            for ( Map.Entry<String, String> entry : fruitmap.entrySet()) {
 
                 System.out.println(" Key: " + entry.getKey());
                 //System.out.println(" Value: " + entry.getValue());
