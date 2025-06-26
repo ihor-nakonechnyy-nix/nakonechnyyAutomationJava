@@ -43,7 +43,7 @@ public class SimpleSeleniumPracticeProject {
         String inputValues = fieldWithInput.getText();
 
         if (!inputValues.isEmpty()) {
-            System.out.println("Поле заповнено чудово");
+            System.out.println("Поле заповнено");
         } else {
             System.out.println("Поле порожнє");
         }
@@ -76,18 +76,25 @@ public class SimpleSeleniumPracticeProject {
         Actions actions = new Actions(driver);
         actions.doubleClick(doubleClickBtn).perform();
 
-        boolean doubleClickMessage = driver.findElement(By.id("doubleClickMessage")).isDisplayed();
-        if (doubleClickMessage)
-            System.out.println("Ok");
+//        boolean doubleClickMessage = driver.findElement(By.id("doubleClickMessage")).isDisplayed();
+//        if (doubleClickMessage)
+//            System.out.println("Ok");
+
+        WebElement doubleClickMessage = driver.findElement(By.id("doubleClickMessage"));
+        Assert.assertEquals(doubleClickMessage.getText(), "You have done a double click", "Message OK");
+
         Thread.sleep(1000);
 
 
         WebElement rightClickBtn = driver.findElement(By.id("rightClickBtn"));
         actions.contextClick(rightClickBtn).perform();
 
-        boolean rightClickMessage = driver.findElement(By.id("rightClickMessage")).isDisplayed();
-        if (rightClickMessage)
-            System.out.println("Ok");
+//        boolean rightClickMessage = driver.findElement(By.id("rightClickMessage")).isDisplayed();
+//        if (rightClickMessage)
+//            System.out.println("Ok");
+
+        WebElement rightClickMessage = driver.findElement(By.id("rightClickMessage"));
+        Assert.assertEquals(rightClickMessage.getText(), "You have done a right click", "Message OK");
 
         Thread.sleep(1000);
 
@@ -95,9 +102,12 @@ public class SimpleSeleniumPracticeProject {
         сlickMe.click();
 
 
-        boolean dynamicClickMessage = driver.findElement(By.id("dynamicClickMessage")).isDisplayed();
-        if (dynamicClickMessage)
-            System.out.println("Ok");
+//        boolean dynamicClickMessage = driver.findElement(By.id("dynamicClickMessage")).isDisplayed();
+//        if (dynamicClickMessage)
+//            System.out.println("Ok");
+
+        WebElement dynamicClickMessage = driver.findElement(By.id("dynamicClickMessage"));
+        Assert.assertEquals(dynamicClickMessage.getText(), "You have done a dynamic click", "Message OK");
 
 
         Thread.sleep(5000);
