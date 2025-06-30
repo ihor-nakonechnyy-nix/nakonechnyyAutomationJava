@@ -104,7 +104,7 @@ public class SimpleSeleniumPracticeProject {
 
 //        boolean dynamicClickMessage = driver.findElement(By.id("dynamicClickMessage")).isDisplayed();
 //        if (dynamicClickMessage)
-//            System.out.println("Ok");
+//        System.out.println("Ok");
 
         WebElement dynamicClickMessage = driver.findElement(By.id("dynamicClickMessage"));
         Assert.assertEquals(dynamicClickMessage.getText(), "You have done a dynamic click", "Message OK");
