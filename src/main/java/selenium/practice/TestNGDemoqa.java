@@ -1,19 +1,22 @@
 package selenium.practice;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.annotations.Test;
 import org.openqa.selenium.interactions.Actions;
 
 import java.time.Duration;
 
-public class SimpleSeleniumPracticeProject {
-
+// create 2 methods
+public class TestNGDemoqa {
     private static WebDriver driver;
 
-    public static void main(String[] args) throws InterruptedException {
+    @Test
+    void test1() throws InterruptedException {
         initDriver();
 
         // task 1
@@ -35,9 +38,15 @@ public class SimpleSeleniumPracticeProject {
         WebElement inputPermanentAddress = driver.findElement(By.id("permanentAddress"));
         inputPermanentAddress.sendKeys("1164 Morning Glory Circle, Westport, CT/t");
 
-        WebElement pressSubmit = driver.findElement(By.id("submit"));
-        pressSubmit.click();
+        Thread.sleep(1000);
 
+//        Actions actions = new Actions(driver);
+//        actions.sendKeys(Keys.PAGE_DOWN).perform();
+
+        WebElement submit = driver.findElement(By.id("submit"));
+        Actions scrollToSubmit = new Actions(driver);
+        scrollToSubmit.scrollToElement(submit);
+        submit.click();
 
         WebElement fieldWithInput = driver.findElement(By.id("output"));
         String inputValues = fieldWithInput.getText();
@@ -58,40 +67,37 @@ public class SimpleSeleniumPracticeProject {
         String actualCurrentAddress = inputCurrentAddress.getAttribute("value");
         Assert.assertEquals(actualCurrentAddress, "42-2630 Hegal Place, Alexandria, Virginia", "не відображається");
 
+
         String actualPermanentAddress = inputPermanentAddress.getAttribute("value");
         Assert.assertEquals(actualPermanentAddress, "1164 Morning Glory Circle, Westport, CT/t", "не відображається");
 
         Thread.sleep(2000);
+        driver.quit();
 
+    }
+
+    // task 2
+    // Click the 'Click me' button. Assert that 'You have done a dynamic click' message is displayed
+    // Do the right click on the 'Right Click me' button. Assert that 'You have done a right click' message is displayed
+    // Do the double click on the 'Double Click me' button. Assert that 'You have done a dynamic click' message is displayed
+
+    @Test
+    void test2() throws InterruptedException {
+        initDriver();
 
         driver.get("https://demoqa.com/buttons");
-
-        // task 2
-        // Click the 'Click me' button. Assert that 'You have done a dynamic click' message is displayed
-        // Do the right click on the 'Right Click me' button. Assert that 'You have done a right click' message is displayed
-        // Do the double click on the 'Double Click me' button. Assert that 'You have done a dynamic click' message is displayed
-
 
         WebElement doubleClickBtn = driver.findElement(By.id("doubleClickBtn"));
         Actions actions = new Actions(driver);
         actions.doubleClick(doubleClickBtn).perform();
-
-//        boolean doubleClickMessage = driver.findElement(By.id("doubleClickMessage")).isDisplayed();
-//        if (doubleClickMessage)
-//            System.out.println("Ok");
 
         WebElement doubleClickMessage = driver.findElement(By.id("doubleClickMessage"));
         Assert.assertEquals(doubleClickMessage.getText(), "You have done a double click", "Message OK");
 
         Thread.sleep(1000);
 
-
         WebElement rightClickBtn = driver.findElement(By.id("rightClickBtn"));
         actions.contextClick(rightClickBtn).perform();
-
-//        boolean rightClickMessage = driver.findElement(By.id("rightClickMessage")).isDisplayed();
-//        if (rightClickMessage)
-//            System.out.println("Ok");
 
         WebElement rightClickMessage = driver.findElement(By.id("rightClickMessage"));
         Assert.assertEquals(rightClickMessage.getText(), "You have done a right click", "Message OK");
@@ -102,17 +108,14 @@ public class SimpleSeleniumPracticeProject {
         сlickMe.click();
 
 
-//        boolean dynamicClickMessage = driver.findElement(By.id("dynamicClickMessage")).isDisplayed();
-//        if (dynamicClickMessage)
-//        System.out.println("Ok");
-
         WebElement dynamicClickMessage = driver.findElement(By.id("dynamicClickMessage"));
         Assert.assertEquals(dynamicClickMessage.getText(), "You have done a dynamic click", "Message OK");
-
 
         Thread.sleep(5000);
 
         driver.quit();
+
+
     }
 
     private static void initDriver() {
