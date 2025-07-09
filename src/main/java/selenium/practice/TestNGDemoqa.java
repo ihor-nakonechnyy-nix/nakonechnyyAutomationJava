@@ -72,6 +72,7 @@ public class TestNGDemoqa {
         Assert.assertEquals(actualPermanentAddress, "1164 Morning Glory Circle, Westport, CT/t", "не відображається");
 
         Thread.sleep(2000);
+        driver.quit();
 
     }
 
