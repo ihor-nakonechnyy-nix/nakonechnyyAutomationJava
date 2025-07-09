@@ -1,3 +1,5 @@
+package selenium.practice;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -10,7 +12,7 @@ import org.openqa.selenium.interactions.Actions;
 import java.time.Duration;
 
 // create 2 methods
-public class TestNG {
+public class TestNGDemoqa {
     private static WebDriver driver;
 
     @Test
@@ -35,13 +37,16 @@ public class TestNG {
 
         WebElement inputPermanentAddress = driver.findElement(By.id("permanentAddress"));
         inputPermanentAddress.sendKeys("1164 Morning Glory Circle, Westport, CT/t");
+
         Thread.sleep(1000);
 
-        Actions actions = new Actions(driver);
-        actions.sendKeys(Keys.PAGE_DOWN).perform();
+//        Actions actions = new Actions(driver);
+//        actions.sendKeys(Keys.PAGE_DOWN).perform();
 
-        WebElement pressSubmit = driver.findElement(By.id("submit"));
-        pressSubmit.click();
+        WebElement submit = driver.findElement(By.id("submit"));
+        Actions scrollToSubmit = new Actions(driver);
+        scrollToSubmit.scrollToElement(submit);
+        submit.click();
 
         WebElement fieldWithInput = driver.findElement(By.id("output"));
         String inputValues = fieldWithInput.getText();
@@ -62,6 +67,7 @@ public class TestNG {
         String actualCurrentAddress = inputCurrentAddress.getAttribute("value");
         Assert.assertEquals(actualCurrentAddress, "42-2630 Hegal Place, Alexandria, Virginia", "не відображається");
 
+
         String actualPermanentAddress = inputPermanentAddress.getAttribute("value");
         Assert.assertEquals(actualPermanentAddress, "1164 Morning Glory Circle, Westport, CT/t", "не відображається");
 
@@ -73,7 +79,6 @@ public class TestNG {
     // Click the 'Click me' button. Assert that 'You have done a dynamic click' message is displayed
     // Do the right click on the 'Right Click me' button. Assert that 'You have done a right click' message is displayed
     // Do the double click on the 'Double Click me' button. Assert that 'You have done a dynamic click' message is displayed
-
 
     @Test
     void test2() throws InterruptedException {
@@ -89,7 +94,6 @@ public class TestNG {
         Assert.assertEquals(doubleClickMessage.getText(), "You have done a double click", "Message OK");
 
         Thread.sleep(1000);
-
 
         WebElement rightClickBtn = driver.findElement(By.id("rightClickBtn"));
         actions.contextClick(rightClickBtn).perform();
