@@ -2,7 +2,6 @@ package saucedemo;
 
 import java.util.ArrayList;
 
-import selenium.saucedemo.Product;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,7 +14,7 @@ import org.testng.annotations.Test;
 import java.time.Duration;
 import java.util.List;
 
-public class ShopTest1 {
+public class FirstTestCase {
 
     private static WebDriver driver;
 
@@ -198,8 +197,8 @@ public class ShopTest1 {
         WebElement ponyExpress = driver.findElement(By.className("pony_express"));
         Assert.assertTrue(ponyExpress.isDisplayed());
 
-        // Закриваємо браузер
-        //driver.quit();
+        //Закриваємо браузер
+        driver.quit();
     }
 
     private static void initDriver() {

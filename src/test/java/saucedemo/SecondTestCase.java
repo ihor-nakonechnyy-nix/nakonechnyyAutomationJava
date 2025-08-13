@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class ShopTest2 {
+public class SecondTestCase {
     WebDriver driver;
 
     @BeforeMethod
