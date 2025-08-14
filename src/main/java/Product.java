@@ -1,5 +1,3 @@
-package selenium.saucedemo;
-
 public class Product {
 
     public String productName;
