@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.Select;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -44,6 +45,9 @@ public class FirstTestCase {
         Assert.assertEquals(logoText.trim(), "Swag Labs", "не відображається");
 
         Thread.sleep(1000);
+
+
+
 
         // Перевіряємо повідомлення про помилку
         WebElement error = driver.findElement(By.xpath("//h3[@data-test='error']"));
