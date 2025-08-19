@@ -5,15 +5,27 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import org.testng.annotations.DataProvider;
 
 import java.time.Duration;
 
 public class SecondTestCase {
     WebDriver driver;
+
+    @DataProvider(name = "productPrices")
+    public Object[][] productData() {
+        return new Object[][]{
+                {"Test.allTheThings() T-Shirt (Red)"},
+                {"Sauce Labs Fleece Jacket"},
+                {"Sauce Labs Bike Light"}
+        };
+    }
 
     @BeforeMethod
     public void setupDriver() {
@@ -28,28 +40,22 @@ public class SecondTestCase {
     }
 
     @AfterMethod
-    public void TearDown() throws InterruptedException {
+    public void tearDown() {
         try {
-            driver.findElement(By.id("react-burger-menu-btn")).click();
-            Thread.sleep(1000);
-
-            driver.findElement(By.id("reset_sidebar_link")).click();
-            Thread.sleep(500);
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1));
+            wait.until(ExpectedConditions.elementToBeClickable(By.id("react-burger-menu-btn"))).click();
+            wait.until(ExpectedConditions.elementToBeClickable(By.id("reset_sidebar_link"))).click();
+        } catch (Exception e) {
+            System.out.println("Помилка під час очищення: " + e.getMessage());
         } finally {
             if (driver != null) {
                 driver.quit();
-
             }
-        }
-
-        {
-
         }
     }
 
-
-    @Test
-    public void checkProductPrice() throws InterruptedException {
+    @Test(dataProvider = "productPrices")
+    public void checkProductPrice(String productName) throws InterruptedException {
         driver.get("https://www.saucedemo.com");
 
         // Login
@@ -57,39 +63,35 @@ public class SecondTestCase {
         driver.findElement(By.id("password")).sendKeys("secret_sauce");
         driver.findElement(By.id("login-button")).click();
 
-        WebElement t_Shirt = driver.findElement(By.id("add-to-cart-test.allthethings()-t-shirt-(red)"));
-        t_Shirt.click();
+        // Добавляємо товари до кошика
+        String productId = "add-to-cart-" + productName
+                .toLowerCase()
+                .replace(" ", "-");
 
-        WebElement jacket = driver.findElement(By.id("add-to-cart-sauce-labs-fleece-jacket"));
-        jacket.click();
+        WebElement productButton = driver.findElement(By.id(productId));
+        productButton.click();
 
-        WebElement bike = driver.findElement(By.id("add-to-cart-sauce-labs-bike-light"));
-        bike.click();
+        // add-to-cart-test.allthethings()-t-shirt-(red)
+        // add-to-cart-test.allthethings()-t-shirt-(red)
 
-        String price1 = driver.findElement(By.xpath("//*[text()='Test.allTheThings() T-Shirt (Red)']/../../..//div[@class='inventory_item_price']")).getText().trim().replace("$", "");
-        String price2 = driver.findElement(By.xpath("//*[text()='Sauce Labs Fleece Jacket']/../../..//div[@class='inventory_item_price']")).getText().trim().replace("$", "");
-        String price3 = driver.findElement(By.xpath("//*[text()='Sauce Labs Bike Light']/../../..//div[@class='inventory_item_price']")).getText().trim().replace("$", "");
+        // {"Test.allTheThings() T-Shirt (Red)"},
+        // {"Sauce Labs Fleece Jacket"},
+        // {"Sauce Labs Bike Light"}
 
-        System.out.println(price1);
-        System.out.println(price2);
-        System.out.println(price3);
+        // Отримуємо ціну на сторінці товарів
+        String pricesOnPage = driver.findElement(By.xpath("//*[text()='" + productName + "']/../../..//div[@class='inventory_item_price']"))
+                .getText().trim().replace("$", "");
 
         System.out.println("_________________________________________________");
 
+        // Переходимо у кошик
         driver.findElement(By.className("shopping_cart_link")).click();
         Thread.sleep(1000);
 
-        String price1Bucket = driver.findElement(By.xpath("//*[text()='Test.allTheThings() T-Shirt (Red)']/../../..//div[@class='inventory_item_price']")).getText().trim().replace("$", "");
-        String price2Bucket = driver.findElement(By.xpath("//*[text()='Sauce Labs Fleece Jacket']/../../..//div[@class='inventory_item_price']")).getText().trim().replace("$", "");
-        String price3Bucket = driver.findElement(By.xpath("//*[text()='Sauce Labs Bike Light']/../../..//div[@class='inventory_item_price']")).getText().trim().replace("$", "");
+        // Перевіряємо, що ціни збігаються
+        String pricesOnBucket = driver.findElement(By.xpath("//*[text()='" + productName + "']/../../..//div[@class='inventory_item_price']"))
+                .getText().trim().replace("$", "");
 
-        System.out.println(price1Bucket);
-        System.out.println(price2Bucket);
-        System.out.println(price3Bucket);
-
-        Assert.assertEquals(price1, price1Bucket, "Ціна для T-Shirt не збігається!");
-        Assert.assertEquals(price2, price2Bucket, "Ціна для Jacket не збігається!");
-        Assert.assertEquals(price3, price3Bucket, "Ціна для Bike Light не збігається!");
-
+        Assert.assertEquals(pricesOnPage, pricesOnBucket, "Ціна для T-Shirt не збігається!");
     }
 }
