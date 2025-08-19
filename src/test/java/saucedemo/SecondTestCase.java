@@ -55,6 +55,12 @@ public class SecondTestCase {
         }
     }
 
+
+    @Test
+    public void dummyTest() {
+        System.out.println("Я простий тест!");
+    }
+
     @Test(dataProvider = "productPrices")
     public void checkProductPrice(String productName) throws InterruptedException {
         driver.get("https://www.saucedemo.com");
@@ -72,13 +78,6 @@ public class SecondTestCase {
         WebElement productButton = driver.findElement(By.id(productId));
         productButton.click();
 
-        // add-to-cart-test.allthethings()-t-shirt-(red)
-        // add-to-cart-test.allthethings()-t-shirt-(red)
-
-        // {"Test.allTheThings() T-Shirt (Red)"},
-        // {"Sauce Labs Fleece Jacket"},
-        // {"Sauce Labs Bike Light"}
-
         // Отримуємо ціну на сторінці товарів
         String pricesOnPage = driver.findElement(By.xpath("//*[text()='" + productName + "']/../../..//div[@class='inventory_item_price']"))
                 .getText().trim().replace("$", "");
@@ -93,6 +92,6 @@ public class SecondTestCase {
         String pricesOnBucket = driver.findElement(By.xpath("//*[text()='" + productName + "']/../../..//div[@class='inventory_item_price']"))
                 .getText().trim().replace("$", "");
 
-        Assert.assertEquals(pricesOnPage, pricesOnBucket, "Ціна для T-Shirt не збігається!");
+        Assert.assertEquals(pricesOnPage, pricesOnBucket, "Ціна не збігається!");
     }
 }
