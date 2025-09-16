@@ -31,9 +31,9 @@ public class SecondTestCase {
     @BeforeMethod
     public void setupDriver() {
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--disable-features=PasswordChangeDetection,PasswordLeakDetection,AutofillKeyedPasswords");
-        options.addArguments("--incognito");
-        options.addArguments("--disable-popup-blocking");
+            options.addArguments("--disable-features=PasswordChangeDetection,PasswordLeakDetection,AutofillKeyedPasswords");
+            options.addArguments("--incognito");
+            options.addArguments("--disable-popup-blocking");
 
         driver = new ChromeDriver(options);
         driver.manage().window().maximize();

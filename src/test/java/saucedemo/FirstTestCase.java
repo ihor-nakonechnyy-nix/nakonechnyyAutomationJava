@@ -47,8 +47,6 @@ public class FirstTestCase {
         Thread.sleep(1000);
 
 
-
-
         // Перевіряємо повідомлення про помилку
         WebElement error = driver.findElement(By.xpath("//h3[@data-test='error']"));
         String errorMessage = error.getText();
