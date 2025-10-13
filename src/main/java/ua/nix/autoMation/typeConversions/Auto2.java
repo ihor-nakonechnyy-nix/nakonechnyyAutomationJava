@@ -15,10 +15,7 @@ public class Auto2 {
 
         int digit1 = n / 10;
         int digit2 = n % 10;
-
-
         int sum = digit1 + digit2;
-
 
         System.out.println("The sum of the digits of " + n + " is: " + sum);
 

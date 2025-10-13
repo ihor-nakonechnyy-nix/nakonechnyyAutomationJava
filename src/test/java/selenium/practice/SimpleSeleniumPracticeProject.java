@@ -16,7 +16,7 @@ public class SimpleSeleniumPracticeProject {
     public static void main(String[] args) throws InterruptedException {
         initDriver();
 
-        driver.get("https://demoqa.com/text-box");
+            driver.get("https://demoqa.com/text-box");
 
         WebElement inputName = driver.findElement(By.id("userName"));
         inputName.sendKeys("Ihor");
