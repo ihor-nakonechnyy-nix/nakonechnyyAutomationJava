@@ -1,6 +1,6 @@
-package ua.nix.autoMation.primitiveTypes.com.welcome;
+package ua.nix.autoMation.primitiveTypes;
 
-public class Main2 {
+public class Hello2 {
 
     public static void main(String[] args) {
         System.out.println("Hello, world!");

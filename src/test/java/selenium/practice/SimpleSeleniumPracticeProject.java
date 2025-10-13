@@ -4,9 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
 import org.openqa.selenium.interactions.Actions;
-
+import org.testng.Assert;
 
 import java.time.Duration;
 
@@ -17,11 +16,7 @@ public class SimpleSeleniumPracticeProject {
     public static void main(String[] args) throws InterruptedException {
         initDriver();
 
-        // task 1
-        // Fill all the provided fields. Click the 'Submit' button. Check that the registration message is displayed.
-        // If it happens to be easy, check that the registration message contains the same data that was used for registration
-
-        driver.get("https://demoqa.com/text-box");
+            driver.get("https://demoqa.com/text-box");
 
         WebElement inputName = driver.findElement(By.id("userName"));
         inputName.sendKeys("Ihor");
@@ -37,7 +32,6 @@ public class SimpleSeleniumPracticeProject {
 
         WebElement pressSubmit = driver.findElement(By.id("submit"));
         pressSubmit.click();
-
 
         WebElement fieldWithInput = driver.findElement(By.id("output"));
         String inputValues = fieldWithInput.getText();
